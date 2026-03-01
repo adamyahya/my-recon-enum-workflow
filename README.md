@@ -9,7 +9,7 @@ nano exclude.txt (write out of scope targets)
 subfinder -d target.com -all -recursive -silent -o subfinder.txt &
 amass enum -passive -d target.com -o amass.txt &
 chaos -d target.com -silent -o chaos.txt &
-findomain -t target.com --quiet -o findomain.txt &
+findomain -t target.com --quiet -u findomain.txt &
 assetfinder --subs-only target.com > subs.txt
 wait 
 cat *.txt | sort -u > passive-subs.txt
